@@ -8,7 +8,7 @@ app_license = "mit"
 # Apps
 # ------------------
 
-# required_apps = []
+required_apps = ["erpnext"]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
@@ -43,7 +43,7 @@ app_license = "mit"
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Customer": "public/js/customer.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -86,7 +86,8 @@ app_license = "mit"
 # ------------
 
 # before_install = "lutech_erp_next.install.before_install"
-# after_install = "lutech_erp_next.install.after_install"
+after_install = "lutech_erp_next.install.after_install"
+after_migrate = "lutech_erp_next.install.after_migrate"
 
 # Uninstallation
 # ------------
@@ -138,13 +139,11 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"Customer": {
+		"validate": "lutech_erp_next.overrides.customer.validate",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
