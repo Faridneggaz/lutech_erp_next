@@ -142,10 +142,7 @@ after_migrate = "lutech_erp_next.install.after_migrate"
 doc_events = {
 	"Customer": {
 		"validate": "lutech_erp_next.overrides.customer.validate",
-	},
-	"User": {
-		"validate": "lutech_erp_next.setup.module_profile.on_user_validate",
-	},
+	}
 }
 
 # Scheduled Tasks
