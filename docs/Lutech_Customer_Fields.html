@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<title>Lutech – Champs Customer</title>
+<style>
+  :root {
+    --brand: #0b3d5c;
+    --accent: #1a6b8a;
+    --line: #c5d0da;
+    --bg: #f4f7fa;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    color: #222;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+    line-height: 1.45;
+  }
+  h1 { color: var(--brand); font-size: 1.6rem; margin: 0 0 4px; text-align: center; }
+  .sub { text-align: center; color: var(--accent); margin-bottom: 8px; }
+  .meta { text-align: center; font-size: 0.9rem; color: #555; margin-bottom: 20px; }
+  h2 {
+    color: var(--brand);
+    font-size: 1.15rem;
+    border-bottom: 2px solid var(--brand);
+    padding-bottom: 4px;
+    margin-top: 28px;
+  }
+  p { font-size: 0.95rem; }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin: 10px 0 8px;
+  }
+  th {
+    background: var(--brand);
+    color: #fff;
+    text-align: left;
+    padding: 7px 8px;
+  }
+  td {
+    border: 1px solid var(--line);
+    padding: 6px 8px;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: var(--bg); }
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 3px;
+    color: #fff;
+  }
+  .new { background: #1b6b3a; }
+  .mod { background: #9a5b00; }
+  .reuse { background: #0b4f8a; }
+  ul { font-size: 0.92rem; }
+  footer { margin-top: 28px; font-size: 0.8rem; color: #777; text-align: center; }
+  @media print {
+    body { padding: 0; }
+    h2 { break-after: avoid; }
+    table { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <h1>Lutech ERP Next</h1>
+  <p class="sub"><strong>Documentation des champs Customer</strong><br/>Ajouts · Renommages · Champs ERPNext réutilisés</p>
+  <p class="meta">DocType : <strong>Customer</strong> · App : <strong>lutech_erp_next</strong> · ERPNext <strong>v16</strong> · Septembre 2026</p>
+  <p><strong>Principe :</strong> n’ajouter que les champs absents d’ERPNext. Réutiliser les champs standards (<code>customer_type</code>, <code>customer_group</code>, <code>tax_id</code>, <code>customer_name</code>) via Property Setter / logique — sans duplication.</p>
+
+  <h2>1. Champs ajoutés <span class="tag new">NOUVEAUX</span></h2>
+  <p>Créés par l’app (préfixe <code>custom_</code>). Ils n’existent pas dans ERPNext standard.</p>
+  <table>
+    <thead>
+      <tr><th>Fieldname</th><th>Label</th><th>Type</th><th>Rôle</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>custom_lutech_generals_section</code></td><td>Generals</td><td>Section Break</td><td>Section Prénom / Nom</td></tr>
+      <tr><td><code>custom_prenom</code></td><td>Prénom</td><td>Data (obligatoire)</td><td>Saisie libre ; alimente <code>customer_name</code></td></tr>
+      <tr><td><code>custom_nom_famille</code></td><td>Nom de Famille</td><td>Data (obligatoire)</td><td>Saisie libre ; alimente <code>customer_name</code></td></tr>
+      <tr><td><code>custom_lutech_generals_col</code></td><td>—</td><td>Column Break</td><td>Mise en page</td></tr>
+      <tr><td><code>custom_lutech_legal_tab</code></td><td>Legal &amp; Tax &amp; Banking Information</td><td>Tab Break</td><td>Nouvel onglet légal / banque</td></tr>
+      <tr><td><code>custom_lutech_legal_section</code></td><td>Legal &amp; Tax</td><td>Section Break</td><td>Bloc fiscal Algérie</td></tr>
+      <tr><td><code>custom_nif</code></td><td>NIF</td><td>Data</td><td>N° Identification Fiscale — liste + filtre</td></tr>
+      <tr><td><code>custom_nis</code></td><td>NIS</td><td>Data</td><td>N° Identification Statistique — liste + filtre</td></tr>
+      <tr><td><code>custom_lutech_legal_col</code></td><td>—</td><td>Column Break</td><td>Mise en page</td></tr>
+      <tr><td><code>custom_rc</code></td><td>RC (Trade Register)</td><td>Data</td><td>Registre de commerce — liste + filtre</td></tr>
+      <tr><td><code>custom_ai</code></td><td>AI (Tax Article)</td><td>Data</td><td>Article d’imposition</td></tr>
+      <tr><td><code>custom_lutech_banking_section</code></td><td>Banking</td><td>Section Break</td><td>Bloc bancaire</td></tr>
+      <tr><td><code>custom_rib</code></td><td>RIB</td><td>Data</td><td>Relevé d’Identité Bancaire — liste + filtre</td></tr>
+      <tr><td><code>custom_bank_name</code></td><td>Bank Name</td><td>Data</td><td>Nom de la banque</td></tr>
+      <tr><td><code>custom_lutech_banking_col</code></td><td>—</td><td>Column Break</td><td>Mise en page</td></tr>
+      <tr><td><code>custom_ccp</code></td><td>CCP</td><td>Data</td><td>Compte CCP — liste + filtre</td></tr>
+      <tr><td><code>custom_cle</code></td><td>Clé</td><td>Data</td><td>Clé RIB / CCP</td></tr>
+      <tr><td><code>custom_lutech_contact_tab</code></td><td>Contact &amp; responsible</td><td>Tab Break</td><td>Regroupe les contacts standards</td></tr>
+    </tbody>
+  </table>
+
+  <h2>2. Champs ERPNext renommés / modifiés <span class="tag mod">PROPERTY SETTER</span></h2>
+  <p>Aucun nouveau champ : on change le label ou le comportement d’un champ <strong>déjà présent</strong>.</p>
+  <table>
+    <thead>
+      <tr><th>Fieldname ERPNext</th><th>Modification</th><th>Propriété</th><th>Détail</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>customer_type</code></td><td>Customer Type → <strong>Legal type</strong></td><td>label</td><td>Type juridique standard ERPNext</td></tr>
+      <tr><td><code>customer_group</code></td><td>Customer Group → <strong>Catégorie</strong></td><td>label + obligatoire</td><td>Catégories Optician / Clinic</td></tr>
+      <tr><td><code>customer_name</code></td><td>Label inchangé</td><td>read_only</td><td>Rempli auto = Prénom + Nom de Famille</td></tr>
+    </tbody>
+  </table>
+
+  <h2>3. Champs ERPNext existants réutilisés <span class="tag reuse">NON DUPLIQUÉS</span></h2>
+  <table>
+    <thead>
+      <tr><th>Fieldname</th><th>Label (UI Lutech)</th><th>Type ERPNext</th><th>Usage Lutech</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>customer_name</code></td><td>Customer Name</td><td>Data</td><td>Calculé depuis Prénom + Nom</td></tr>
+      <tr><td><code>customer_type</code></td><td>Legal type</td><td>Select</td><td>Type légal standard</td></tr>
+      <tr><td><code>customer_group</code></td><td>Catégorie</td><td>Link → Customer Group</td><td>Catégories métier</td></tr>
+      <tr><td><code>tax_id</code></td><td>Tax ID</td><td>Data</td><td>Non dupliqué (NIF est à part)</td></tr>
+      <tr><td><code>image</code></td><td>Image</td><td>Attach Image</td><td>Ancre de l’onglet Legal</td></tr>
+      <tr><td>Contact / Address</td><td>Contacts liés</td><td>Liens standard</td><td>Onglet Contact &amp; responsible</td></tr>
+    </tbody>
+  </table>
+
+  <h2>4. Customer Groups ajoutés</h2>
+  <table>
+    <thead>
+      <tr><th>Nom</th><th>Description</th><th>Remarque</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>All Customer Groups</td><td>Groupe parent</td><td>Créé s’il n’existe pas</td></tr>
+      <tr><td>Optician</td><td>Catégorie opticien</td><td>Enfant du parent</td></tr>
+      <tr><td>Clinic</td><td>Catégorie clinique</td><td>Enfant du parent</td></tr>
+    </tbody>
+  </table>
+
+  <h2>5. Synthèse</h2>
+  <table>
+    <thead>
+      <tr><th>Catégorie</th><th>Contenu</th><th>Statut</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Custom Fields saisie métier</td><td>11 champs Data + 7 breaks/tabs/sections</td><td><span class="tag new">NOUVEAUX</span></td></tr>
+      <tr><td>Champs Algérie</td><td>NIF, NIS, RC, AI, RIB, Bank Name, CCP, Clé</td><td><span class="tag new">NOUVEAUX</span></td></tr>
+      <tr><td>Identité</td><td>Prénom, Nom de Famille</td><td><span class="tag new">NOUVEAUX</span></td></tr>
+      <tr><td>Property Setters</td><td>customer_type, customer_group, customer_name</td><td><span class="tag mod">MODIFIÉS</span></td></tr>
+      <tr><td>Non dupliqués ERPNext</td><td>customer_type, customer_group, tax_id, customer_name</td><td><span class="tag reuse">RÉUTILISÉS</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>6. Règle anti-duplication</h2>
+  <ul>
+    <li>Ne <strong>pas</strong> créer <code>custom_customer_type</code> → utiliser <code>customer_type</code> (Legal type)</li>
+    <li>Ne <strong>pas</strong> créer <code>custom_categorie</code> → utiliser <code>customer_group</code> (Catégorie)</li>
+    <li>Ne <strong>pas</strong> créer un second <code>tax_id</code> → NIF reste le champ Algérie dédié</li>
+    <li><code>customer_name</code> reste le champ standard, lecture seule, auto-rempli</li>
+  </ul>
+
+  <footer>
+    Source : <code>setup/customer.py</code> · <code>overrides/customer.py</code> · <code>public/js/customer.js</code><br/>
+    Pour PDF : ouvrir ce fichier dans le navigateur → Imprimer → Enregistrer au format PDF
+  </footer>
+</body>
+</html>

@@ -1,0 +1,242 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842]
+   /Contents 6 0 R
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R >> >> >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842]
+   /Contents 7 0 R
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R >> >> >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842]
+   /Contents 8 0 R
+   /Resources << /Font << /F1 9 0 R /F2 10 0 R >> >> >>
+endobj
+6 0 obj
+<< /Length 2456 >>
+stream
+BT
+/F2 18 Tf 50 800 Td (Lutech ERP Next) Tj
+/F1 11 Tf 0 -22 Td (Documentation des champs Customer) Tj
+0 -14 Td (Ajouts / Renommages / Champs ERPNext reutilises) Tj
+/F1 9 Tf 0 -18 Td (DocType: Customer | App: lutech_erp_next | ERPNext v16 | Sept. 2026) Tj
+/F2 11 Tf 0 -22 Td (Principe) Tj
+/F1 9 Tf 0 -14 Td (N'ajouter que les champs absents d'ERPNext. Reutiliser customer_type,) Tj
+0 -11 Td (customer_group, tax_id, customer_name via Property Setter, sans duplication.) Tj
+/F2 12 Tf 0 -24 Td (1. Champs AJOUTES \(Custom Fields\) - PAS dans ERPNext) Tj
+/F2 8 Tf 0 -16 Td (Fieldname) Tj
+140 0 Td (Label) Tj
+270 0 Td (Type) Tj
+350 0 Td (Role) Tj
+/F1 8 Tf -410 -12 Td (custom_lutech_generals_section) Tj
+140 0 Td (Generals) Tj
+270 0 Td (Section) Tj
+350 0 Td (Section Prenom/Nom) Tj
+-410 -11 Td (custom_prenom) Tj
+140 0 Td (Prenom) Tj
+270 0 Td (Data reqd) Tj
+350 0 Td (Alimente customer_name) Tj
+-410 -11 Td (custom_nom_famille) Tj
+140 0 Td (Nom de Famille) Tj
+270 0 Td (Data reqd) Tj
+350 0 Td (Alimente customer_name) Tj
+-410 -11 Td (custom_lutech_generals_col) Tj
+140 0 Td (-) Tj
+270 0 Td (Column) Tj
+350 0 Td (Mise en page) Tj
+-410 -11 Td (custom_lutech_legal_tab) Tj
+140 0 Td (Legal & Tax & Banking) Tj
+270 0 Td (Tab) Tj
+350 0 Td (Nouvel onglet) Tj
+-410 -11 Td (custom_lutech_legal_section) Tj
+140 0 Td (Legal & Tax) Tj
+270 0 Td (Section) Tj
+350 0 Td (Bloc fiscal Algerie) Tj
+-410 -11 Td (custom_nif) Tj
+140 0 Td (NIF) Tj
+270 0 Td (Data) Tj
+350 0 Td (ID fiscale + filtre) Tj
+-410 -11 Td (custom_nis) Tj
+140 0 Td (NIS) Tj
+270 0 Td (Data) Tj
+350 0 Td (ID statistique + filtre) Tj
+-410 -11 Td (custom_lutech_legal_col) Tj
+140 0 Td (-) Tj
+270 0 Td (Column) Tj
+350 0 Td (Mise en page) Tj
+-410 -11 Td (custom_rc) Tj
+140 0 Td (RC Trade Register) Tj
+270 0 Td (Data) Tj
+350 0 Td (Registre de commerce) Tj
+-410 -11 Td (custom_ai) Tj
+140 0 Td (AI Tax Article) Tj
+270 0 Td (Data) Tj
+350 0 Td (Article d'imposition) Tj
+-410 -11 Td (custom_lutech_banking_section) Tj
+140 0 Td (Banking) Tj
+270 0 Td (Section) Tj
+350 0 Td (Bloc bancaire) Tj
+-410 -11 Td (custom_rib) Tj
+140 0 Td (RIB) Tj
+270 0 Td (Data) Tj
+350 0 Td (Releve identite bancaire) Tj
+-410 -11 Td (custom_bank_name) Tj
+140 0 Td (Bank Name) Tj
+270 0 Td (Data) Tj
+350 0 Td (Nom de la banque) Tj
+-410 -11 Td (custom_lutech_banking_col) Tj
+140 0 Td (-) Tj
+270 0 Td (Column) Tj
+350 0 Td (Mise en page) Tj
+-410 -11 Td (custom_ccp) Tj
+140 0 Td (CCP) Tj
+270 0 Td (Data) Tj
+350 0 Td (Compte CCP + filtre) Tj
+-410 -11 Td (custom_cle) Tj
+140 0 Td (Cle) Tj
+270 0 Td (Data) Tj
+350 0 Td (Cle RIB / CCP) Tj
+-410 -11 Td (custom_lutech_contact_tab) Tj
+140 0 Td (Contact & responsible) Tj
+270 0 Td (Tab) Tj
+350 0 Td (Onglet contacts) Tj
+ET
+endstream
+endobj
+7 0 obj
+<< /Length 1980 >>
+stream
+BT
+/F2 12 Tf 50 800 Td (2. Champs ERPNext RENOMMES / MODIFIES) Tj
+/F1 9 Tf 0 -14 Td (Property Setters: aucun nouveau champ, seulement label ou comportement.) Tj
+/F2 8 Tf 0 -18 Td (Fieldname) Tj
+130 0 Td (Modification) Tj
+310 0 Td (Propriete) Tj
+400 0 Td (Detail) Tj
+/F1 8 Tf -450 -12 Td (customer_type) Tj
+130 0 Td (Customer Type -> Legal type) Tj
+310 0 Td (label) Tj
+400 0 Td (Type juridique) Tj
+-450 -11 Td (customer_group) Tj
+130 0 Td (Customer Group -> Categorie) Tj
+310 0 Td (label+reqd) Tj
+400 0 Td (Optician/Clinic) Tj
+-450 -11 Td (customer_name) Tj
+130 0 Td (Label inchange) Tj
+310 0 Td (read_only) Tj
+400 0 Td (Auto Prenom+Nom) Tj
+/F2 12 Tf 0 -30 Td (3. Champs ERPNext EXISTANTS reutilises) Tj
+/F1 9 Tf 0 -14 Td (NON dupliques: l'app ne recree pas ces champs.) Tj
+/F2 8 Tf 0 -18 Td (Fieldname) Tj
+130 0 Td (Label UI Lutech) Tj
+280 0 Td (Type ERPNext) Tj
+410 0 Td (Usage) Tj
+/F1 8 Tf -460 -12 Td (customer_name) Tj
+130 0 Td (Customer Name) Tj
+280 0 Td (Data) Tj
+410 0 Td (Calcule auto) Tj
+-460 -11 Td (customer_type) Tj
+130 0 Td (Legal type) Tj
+280 0 Td (Select) Tj
+410 0 Td (Type legal) Tj
+-460 -11 Td (customer_group) Tj
+130 0 Td (Categorie) Tj
+280 0 Td (Link) Tj
+410 0 Td (Categories metier) Tj
+-460 -11 Td (tax_id) Tj
+130 0 Td (Tax ID) Tj
+280 0 Td (Data) Tj
+410 0 Td (NIF reste a part) Tj
+-460 -11 Td (image) Tj
+130 0 Td (Image) Tj
+280 0 Td (Attach Image) Tj
+410 0 Td (Ancre onglet) Tj
+-460 -11 Td (Contact/Address) Tj
+130 0 Td (Contacts lies) Tj
+280 0 Td (Liens standard) Tj
+410 0 Td (Onglet Contact) Tj
+/F2 12 Tf 0 -30 Td (4. Customer Groups ajoutes) Tj
+/F1 9 Tf 0 -14 Td (Sous le champ standard customer_group \(Categorie\):) Tj
+/F2 8 Tf 0 -16 Td (Nom) Tj
+180 0 Td (Description) Tj
+380 0 Td (Remarque) Tj
+/F1 8 Tf -430 -12 Td (All Customer Groups) Tj
+180 0 Td (Groupe parent) Tj
+380 0 Td (Cree si absent) Tj
+-430 -11 Td (Optician) Tj
+180 0 Td (Categorie opticien) Tj
+380 0 Td (Enfant) Tj
+-430 -11 Td (Clinic) Tj
+180 0 Td (Categorie clinique) Tj
+380 0 Td (Enfant) Tj
+ET
+endstream
+endobj
+8 0 obj
+<< /Length 1450 >>
+stream
+BT
+/F2 12 Tf 50 800 Td (5. Synthese) Tj
+/F2 8 Tf 0 -18 Td (Categorie) Tj
+200 0 Td (Contenu) Tj
+430 0 Td (Statut) Tj
+/F1 8 Tf -480 -12 Td (Custom Fields metier) Tj
+200 0 Td (11 Data + 7 layout fields) Tj
+430 0 Td (NOUVEAUX) Tj
+-480 -11 Td (Champs Algerie) Tj
+200 0 Td (NIF NIS RC AI RIB Bank CCP Cle) Tj
+430 0 Td (NOUVEAUX) Tj
+-480 -11 Td (Identite) Tj
+200 0 Td (Prenom, Nom de Famille) Tj
+430 0 Td (NOUVEAUX) Tj
+-480 -11 Td (Property Setters) Tj
+200 0 Td (customer_type, group, name) Tj
+430 0 Td (MODIFIES) Tj
+-480 -11 Td (Non dupliques ERPNext) Tj
+200 0 Td (type, group, tax_id, name) Tj
+430 0 Td (REUTILISES) Tj
+/F2 12 Tf 0 -36 Td (6. Regle anti-duplication) Tj
+/F1 9 Tf 0 -16 Td (- Ne PAS creer custom_customer_type \(utiliser Legal type\)) Tj
+0 -12 Td (- Ne PAS creer custom_categorie \(utiliser customer_group\)) Tj
+0 -12 Td (- Ne PAS creer un second tax_id \(NIF = champ Algerie distinct\)) Tj
+0 -12 Td (- customer_name reste standard, read-only, auto-rempli) Tj
+/F2 12 Tf 0 -28 Td (7. Fichiers source) Tj
+/F1 9 Tf 0 -16 Td (setup/customer.py) Tj
+0 -12 Td (overrides/customer.py) Tj
+0 -12 Td (public/js/customer.js) Tj
+/F1 8 Tf 0 -28 Td (Document Lutech - lutech_erp_next - champs Customer) Tj
+ET
+endstream
+endobj
+9 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>
+endobj
+10 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>
+endobj
+xref
+0 11
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000274 00000 n 
+0000000413 00000 n 
+0000000552 00000 n 
+0000003072 00000 n 
+0000005116 00000 n 
+0000006630 00000 n 
+0000006723 00000 n 
+trailer
+<< /Size 11 /Root 1 0 R >>
+startxref
+6818
+%%EOF

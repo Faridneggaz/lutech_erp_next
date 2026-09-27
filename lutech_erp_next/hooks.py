@@ -142,7 +142,10 @@ after_migrate = "lutech_erp_next.install.after_migrate"
 doc_events = {
 	"Customer": {
 		"validate": "lutech_erp_next.overrides.customer.validate",
-	}
+	},
+	"User": {
+		"validate": "lutech_erp_next.setup.module_profile.on_user_validate",
+	},
 }
 
 # Scheduled Tasks
@@ -255,3 +258,39 @@ doc_events = {
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+fixtures = [
+    {
+        'dt': 'DocType',
+        'filters': [
+            ["istable" , "=" ,  1],
+            ["module" , "in" , ["Lutech ERP Next"]],
+        ]
+    },
+    {
+        'dt': 'Custom Field',
+        'filters': [
+            ["module" , "in" , ["Lutech ERP Next"]],
+        ]
+    },
+    {
+        'dt': 'Client Script',
+        'filters': [
+            ["module" , "in" , ["Lutech ERP Next"]],
+        ]
+    },
+    {
+        'dt': 'Server Script',
+        'filters': [
+            ["module" , "in" , ["Lutech ERP Next"]],
+        ]
+    },
+    {
+        'dt': 'Report',
+        'filters': [
+            ["module" , "in" , ["Lutech ERP Next"]],
+        ]
+    },
+    {
+        'dt': 'Workflow',   
+    },
+]
